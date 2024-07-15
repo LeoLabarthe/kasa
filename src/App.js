@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
+import accommodations from './data/accommodations.json';
+
 
 function App() {
   return (
