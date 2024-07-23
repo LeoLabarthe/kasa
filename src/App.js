@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/about';
 import HousingDetail from './pages/HousingDetail';
+import NotFound from './pages/NotFound';
 import './App.scss';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/housing-detail">Housing Detail</Link></li>
+              <li><Link to="/not-Found"> 404</Link> </li>
             </ul>
           </nav>
         </header>
@@ -24,6 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/housing-detail" element={<HousingDetail />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
       </div>
