@@ -1,0 +1,10 @@
+$primary-color : #FF6060;
+$secondary-color: #000000;
+
+@import 'components';
+@import 'layout';
+
+body {
+    font-family: Montserrat;
+    background-color: white;
+  }
