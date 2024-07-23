@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from '../assets/logo.svg';
+import bannerImage from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png';
 import '../style/main.scss';
 import '../style/layout.scss';
 import '../App.scss';
@@ -7,7 +9,7 @@ function Home() {
   return (
     <div className="home">
       <header className="home-header">
-        <img src="./assets/logo.svg" alt="Kasa logo" className="home-logo" />
+        <img src={logo} alt="Kasa logo" className="home-logo" />
         <nav>
           <ul className="home-nav">
             <li><a href="/">ACCUEIL</a></li>
@@ -15,7 +17,7 @@ function Home() {
           </ul>
         </nav>
       </header>
-      <div className="home-banner">
+      <div className="home-banner" style={{ backgroundImage: `url(${bannerImage})` }}>
         <h1>Chez vous, partout et ailleurs</h1>
       </div>
       <div className="home-listings">
