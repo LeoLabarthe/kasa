@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Home from './src/pages/Home';
-import About from './src/pages/About';
+import Home from './pages/home';
+import About from './pages/about';
 import accommodations from './data/accommodations.json';
 import './App.scss';
 
