@@ -1,0 +1,179 @@
+.housing-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .housing-detail-logo {
+      height: 40px;
+    }
+
+    .housing-detail-nav {
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0 15px;
+
+        a {
+          text-decoration: none;
+          color: #333;
+          font-weight: bold;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &-banner {
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  &-content {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px 0;
+
+    h1 {
+      font-size: 24px;
+      color: #FF6060;
+    }
+
+    p {
+      font-size: 18px;
+      color: #999;
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      margin: 10px 0;
+
+      .tag {
+        background: #FF6060;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+
+    .housing-detail-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+
+      .rating {
+        .star {
+          color: #FF6060;
+          font-size: 20px;
+        }
+      }
+
+      .host {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-right: 10px;
+          font-weight: bold;
+        }
+
+        .host-img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .accordion {
+      .accordion-item {
+        border: 1px solid #FF6060;
+        border-radius: 10px;
+        margin: 10px 0;
+
+        .accordion-button {
+          width: 100%;
+          padding: 15px;
+          background-color: #FF6060;
+          color: white;
+          text-align: left;
+          font-size: 18px;
+          font-weight: bold;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+
+          &:hover {
+            background-color: #FF8080;
+          }
+
+          &:after {
+            content: '';
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 5px;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 15px;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        .accordion-content {
+          display: none;
+          padding: 15px;
+          background-color: #FFECEC;
+          border-top: 1px solid #FF6060;
+
+          p {
+            margin: 0;
+          }
+        }
+
+        .accordion-button.active + .accordion-content {
+          display: block;
+        }
+
+        .accordion-button.active:after {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  &-footer {
+    width: 100%;
+    padding: 20px;
+    background: #333;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+  }
+}
