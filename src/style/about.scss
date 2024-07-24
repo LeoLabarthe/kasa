@@ -1,0 +1,126 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+  
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+      .about-logo {
+        height: 40px;
+      }
+  
+      .about-nav {
+        display: flex;
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin: 0 15px;
+  
+          a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  
+    .banner {
+      width: 100%;
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  
+    .about-details {
+      width: 80%;
+      max-width: 600px;
+      margin: 20px 0;
+  
+      .accordion {
+        .accordion-item {
+          border: 1px solid #FF6060;
+          border-radius: 10px;
+          margin: 10px 0;
+  
+          .accordion-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #FF6060;
+            color: white;
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+  
+            &:hover {
+              background-color: #FF8080;
+            }
+  
+            &:after {
+              content: '';
+              border: solid white;
+              border-width: 0 3px 3px 0;
+              display: inline-block;
+              padding: 5px;
+              transform: rotate(45deg);
+              position: absolute;
+              right: 15px;
+              transition: transform 0.3s ease;
+            }
+          }
+  
+          .accordion-content {
+            display: none;
+            padding: 15px;
+            background-color: #FFECEC;
+            border-top: 1px solid #FF6060;
+  
+            p {
+              margin: 0;
+            }
+          }
+  
+          .accordion-button.active + .accordion-content {
+            display: block;
+          }
+  
+          .accordion-button.active:after {
+            transform: rotate(-135deg);
+          }
+        }
+      }
+    }
+  
+    &-footer {
+      width: 100%;
+      padding: 20px;
+      background: #333;
+      color: white;
+      text-align: center;
+      margin-top: auto;
+    }
+  }

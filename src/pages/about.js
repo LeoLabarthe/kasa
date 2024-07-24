@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import '../style/layout.scss';
-import logo from '../assets/logo.svg';
-import bannerImage from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png';
+import logo from '../assets/Vector.png';
+import Banner from '../components/Banner';
+import '../style/about.scss';
 
 function About() {
   const [activeIndices, setActiveIndices] = useState([]);
@@ -25,9 +25,7 @@ function About() {
           </ul>
         </nav>
       </header>
-      <div className="banner">
-        <img src={bannerImage} alt="Banner" />
-      </div>
+      <Banner text="Chez vous, partout et ailleurs" />
       <div className="about-details">
         <div className="accordion">
           {['Fiabilité', 'Respect', 'Service', 'Sécurité'].map((title, index) => (

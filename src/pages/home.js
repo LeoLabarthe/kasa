@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
-import bannerImage from '../assets/eric-muhr-P_XxsdVgtpQ-unsplash.png';
+import Banner from '../components/Banner';
 import '../style/main.scss';
 import '../style/layout.scss';
 import '../App.scss';
@@ -17,9 +17,7 @@ function Home() {
           </ul>
         </nav>
       </header>
-      <div className="home-banner" style={{ backgroundImage: `url(${bannerImage})` }}>
-        <h1>Chez vous, partout et ailleurs</h1>
-      </div>
+      <Banner text="Chez vous, partout et ailleurs" />
       <div className="home-listings">
         <div className="listing-card">Titre de la location</div>
         <div className="listing-card">Titre de la location</div>
