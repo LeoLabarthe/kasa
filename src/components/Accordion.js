@@ -13,7 +13,7 @@ function Accordion({ title, content }) {
     <div className="accordion-item">
       <button className={`accordion-button ${isOpen ? 'active' : ''}`} onClick={toggleAccordion}>
         {title}
-        <span className="accordion-arrow"></span>
+        <span className={`accordion-arrow ${isOpen ? 'active' : ''}`}></span>
       </button>
       <div className={`accordion-content ${isOpen ? 'active' : ''}`}>
         <p>{content}</p>

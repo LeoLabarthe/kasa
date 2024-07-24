@@ -26,19 +26,16 @@
   
       .accordion-arrow {
         display: inline-block;
-        width: 0;
-        height: 0;
-        margin-left: 10px;
-        vertical-align: middle;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 5px solid white;
-        content: '';
+        width: 10px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
         transition: transform 0.3s ease;
       }
   
       &.active .accordion-arrow {
-        transform: rotate(180deg);
+        transform: rotate(-135deg);
       }
     }
   
