@@ -16,8 +16,8 @@ function App() {
             <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
-              <li><Link to="/housing-detail">Housing Detail</Link></li>
-              <li><Link to="/not-Found"> 404</Link> </li>
+              <li><Link to="/housing/c67ab8a7">Housing Detail</Link></li> {/* Utilisation d'un ID valide pour tester */}
+              <li><Link to="/not-found">404</Link></li>
             </ul>
           </nav>
         </header>
@@ -25,7 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/housing-detail" element={<HousingDetail />} />
+            <Route path="/housing/:id" element={<HousingDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

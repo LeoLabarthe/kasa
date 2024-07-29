@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../assets/Vector.png';
 import Banner from '../components/Banner';
 import '../style/main.scss';
 import '../style/layout.scss';
