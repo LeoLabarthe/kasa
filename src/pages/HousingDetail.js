@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import logo from '../assets/Vector.png';
+import logo from '../assets/LOGO.png';
 import Carousel from '../components/Carousel';
 import Accordion from '../components/Accordion';
 import accommodations from '../data/accommodations.json';

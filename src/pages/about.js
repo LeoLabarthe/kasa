@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/Vector.png';
+import logo from '../assets/LOGO.png';
 import Banner from '../components/Banner';
 import Accordion from '../components/Accordion';
 import '../style/about.scss';
