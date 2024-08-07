@@ -3,6 +3,7 @@ import logo from '../assets/LOGO.png';
 import Banner from '../components/Banner';
 import Accordion from '../components/Accordion';
 import '../style/about.scss';
+import Footer from '../components/Footer';
 
 function About() {
   const accordionItems = [
@@ -29,9 +30,7 @@ function About() {
           <Accordion key={index} title={item.title} content={item.content} />
         ))}
       </div>
-      <footer className="about-footer">
-        <p>© 2020 Kasa. All rights reserved</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

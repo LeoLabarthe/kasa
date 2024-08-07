@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import logo from '../assets/LOGO.png';
 import Carousel from '../components/Carousel';
 import Accordion from '../components/Accordion';
+import Footer from '../components/Footer';
 import accommodations from '../data/accommodations.json';
 import '../style/housingDetail.scss';
 
@@ -56,9 +57,7 @@ function HousingDetail() {
           ))}
         </div>
       </div>
-      <footer className="housing-detail-footer">
-        <p>© 2020 Kasa. All rights reserved</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

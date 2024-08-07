@@ -4,9 +4,11 @@ import Banner from '../components/Banner';
 import Card from '../components/Card';
 import '../style/main.scss';
 import '../style/layout.scss';
-import '../style/home.scss'; // Import de home.scss
+import '../style/home.scss';
 import '../App.scss';
 import accommodations from '../data/accommodations.json';
+import Footer from '../components/Footer';
+
 
 function Home() {
   return (
@@ -34,9 +36,7 @@ function Home() {
           ))}
         </div>
       </div>
-      <footer className="home-footer">
-        <p>© 2020 Kasa. All rights reserved</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
