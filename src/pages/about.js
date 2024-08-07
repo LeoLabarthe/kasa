@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../assets/LOGO.png';
+import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Accordion from '../components/Accordion';
-import '../style/about.scss';
 import Footer from '../components/Footer';
+import '../style/about.scss';
 
 function About() {
   const accordionItems = [
@@ -15,15 +15,7 @@ function About() {
 
   return (
     <div className="about">
-      <header className="about-header">
-        <img src={logo} alt="Kasa logo" className="about-logo" />
-        <nav>
-          <ul className="about-nav">
-            <li><a href="/">ACCUEIL</a></li>
-            <li><a href="/about">A PROPOS</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <Banner text="Chez vous, partout et ailleurs" />
       <div className="about-details">
         {accordionItems.map((item, index) => (

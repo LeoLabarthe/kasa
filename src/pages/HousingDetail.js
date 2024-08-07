@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import logo from '../assets/LOGO.png';
+import Header from '../components/Header';
 import Carousel from '../components/Carousel';
 import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
@@ -22,15 +22,7 @@ function HousingDetail() {
 
   return (
     <div className="housing-detail">
-      <header className="housing-detail-header">
-        <img src={logo} alt="Kasa logo" className="housing-detail-logo" />
-        <nav>
-          <ul className="housing-detail-nav">
-            <li><a href="/">ACCUEIL</a></li>
-            <li><a href="/about">A PROPOS</a></li>
-          </ul>
-        </nav>
-      </header>
+      <Header />
       <Carousel pictures={accommodation.pictures} />
       <div className="housing-detail-content">
         <h1>{accommodation.title}</h1>
