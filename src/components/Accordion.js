@@ -11,7 +11,10 @@ function Accordion({ title, content }) {
 
   return (
     <div className="accordion-item">
-      <button className={`accordion-button ${isOpen ? 'active' : ''}`} onClick={toggleAccordion}>
+      <button
+        className={`accordion-button ${isOpen ? 'active' : ''}`}
+        onClick={toggleAccordion}
+      >
         {title}
         <span className={`accordion-arrow ${isOpen ? 'active' : ''}`}></span>
       </button>

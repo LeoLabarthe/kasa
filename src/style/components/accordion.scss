@@ -1,8 +1,16 @@
-.accordion-item {
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 65%;
+  margin-bottom: 20px;
+
+  .accordion-item {
+    flex: 1;
     border: 1px solid #FF6060;
     border-radius: 10px;
-    margin: 10px 0;
-  
+    overflow: hidden;
+
     .accordion-button {
       width: 100%;
       padding: 15px;
@@ -14,44 +22,40 @@
       border: none;
       outline: none;
       cursor: pointer;
-      border-radius: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
-  
+
       &:hover {
         background-color: #FF8080;
       }
-  
+
       .accordion-arrow {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border: solid white;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
         transition: transform 0.3s ease;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(45deg);
       }
-  
+
       &.active .accordion-arrow {
         transform: rotate(-135deg);
       }
     }
-  
+
     .accordion-content {
       display: none;
       padding: 15px;
       background-color: #FFECEC;
-      border-top: 1px solid #FF6060;
-  
+
       p {
         margin: 0;
       }
     }
-  
-    .accordion-content.active {
+
+    .accordion-button.active + .accordion-content {
       display: block;
     }
   }
-  
+}

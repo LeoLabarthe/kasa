@@ -22,32 +22,35 @@ function HousingDetail() {
 
   return (
     <div className="housing-detail">
-      <Header />
+      <Header isHousingDetail={true} />
       <Carousel pictures={accommodation.pictures} />
       <div className="housing-detail-content">
-        <h1>{accommodation.title}</h1>
-        <p>{accommodation.location}</p>
-        <div className="tags">
-          {accommodation.tags.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
-          ))}
+        <div className="text-section">
+          <h1>{accommodation.title}</h1>
+          <p>{accommodation.location}</p>
+          <div className="tags">
+            {accommodation.tags.map((tag, index) => (
+              <span key={index} className="tag">{tag}</span>
+            ))}
+          </div>
         </div>
-        <div className="housing-detail-info">
+
+        <div className="host-section">
+          <div className="host">
+            <img src={accommodation.host.picture} alt={accommodation.host.name} className="host-img" />
+            <span>{accommodation.host.name}</span>
+          </div>
           <div className="rating">
             {[...Array(5)].map((star, index) => (
               <span key={index} className={`star ${index < accommodation.rating ? 'filled' : ''}`}>&#9733;</span>
             ))}
           </div>
-          <div className="host">
-            <span>{accommodation.host.name}</span>
-            <img src={accommodation.host.picture} alt={accommodation.host.name} className="host-img" />
-          </div>
         </div>
-        <div className="accordion">
-          {accordionItems.map((item, index) => (
-            <Accordion key={index} title={item.title} content={item.content} />
-          ))}
-        </div>
+      </div>
+      <div className="accordion">
+        {accordionItems.map((item, index) => (
+          <Accordion key={index} title={item.title} content={item.content} />
+        ))}
       </div>
       <Footer />
     </div>

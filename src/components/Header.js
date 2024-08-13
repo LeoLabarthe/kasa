@@ -1,16 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import logo from '../assets/LOGO.png';
-import '../style/header.scss';
+import '../style/header.scss'; 
 
-function Header() {
+function Header({ isHousingDetail }) {
   return (
-    <header className="header">
+    <header className={`header ${isHousingDetail ? 'header-housing-detail' : ''}`}>
       <img src={logo} alt="Kasa logo" className="header-logo" />
       <nav>
         <ul className="header-nav">
-          <li><Link to="/">ACCUEIL</Link></li>
-          <li><Link to="/about">A PROPOS</Link></li>
+          <li><a href="/">ACCUEIL</a></li>
+          <li><a href="/about">A PROPOS</a></li>
         </ul>
       </nav>
     </header>
