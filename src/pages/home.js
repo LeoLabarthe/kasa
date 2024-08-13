@@ -7,12 +7,13 @@ import '../style/home.scss';
 import '../App.scss';
 import accommodations from '../data/accommodations.json';
 import Footer from '../components/Footer';
+import homeBanner from '../assets/home-banner.png';
 
 function Home() {
   return (
     <div className="home">
       <Header />
-      <Banner text="Chez vous, partout et ailleurs" />
+      <Banner text="Chez vous, partout et ailleurs" image={homeBanner} />
       <div className="home-listings-container">
         <div className="home-listings-container-listings">
           {accommodations.map((accommodation) => (

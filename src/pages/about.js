@@ -4,6 +4,7 @@ import Banner from '../components/Banner';
 import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
 import '../style/about.scss';
+import aboutBanner from '../assets/about-banner.png';
 
 function About() {
   const accordionItems = [
@@ -16,7 +17,7 @@ function About() {
   return (
     <div className="about">
       <Header />
-      <Banner text="Chez vous, partout et ailleurs" />
+      <Banner image={aboutBanner} showText={false} />
       <div className="about-details">
         {accordionItems.map((item, index) => (
           <Accordion key={index} title={item.title} content={item.content} />

@@ -81,7 +81,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         text-align: center;
-        flex: 1 1 calc(33.333% - 40px); /* Espace disponible divisé par 3, en tenant compte des écarts */
+        flex: 1 1 calc(33.333% - 40px);
         max-width: calc(33.333% - 40px);
       }
     }
