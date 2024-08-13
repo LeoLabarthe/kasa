@@ -1,15 +1,12 @@
 .accordion {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: 65%;
+  width: 100%;
   margin-bottom: 20px;
 
   .accordion-item {
-    flex: 1;
     border: 1px solid #FF6060;
     border-radius: 10px;
     overflow: hidden;
+    margin-bottom: 10px;
 
     .accordion-button {
       width: 100%;

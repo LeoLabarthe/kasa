@@ -19,9 +19,11 @@ function About() {
       <Header />
       <Banner image={aboutBanner} showText={false} />
       <div className="about-details">
-        {accordionItems.map((item, index) => (
-          <Accordion key={index} title={item.title} content={item.content} />
-        ))}
+        <div className="accordion">
+          {accordionItems.map((item, index) => (
+            <Accordion key={index} title={item.title} content={item.content} />
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
