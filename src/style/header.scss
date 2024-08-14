@@ -6,6 +6,28 @@
   padding: 20px;
   background: white;
 
+  &.header-housing-detail {
+    width: 85%;
+    padding: 10px 20px;
+    box-shadow: none;
+
+    .header-logo {
+      height: 30px;
+    }
+
+    .header-nav {
+      font-size: 14px;
+
+      li {
+        margin: 0 10px;
+
+        a {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
   .header-logo {
     height: 40px;
   }

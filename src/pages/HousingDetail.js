@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Carousel from '../components/Carousel';
 import Accordion from '../components/Accordion';
@@ -12,7 +12,7 @@ function HousingDetail() {
   const accommodation = accommodations.find(item => item.id === id);
 
   if (!accommodation) {
-    return <div>Logement non trouvé</div>;
+    return <Navigate to="/not-found" replace />;
   }
 
   const accordionItems = [
