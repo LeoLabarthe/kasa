@@ -11,16 +11,16 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    width: 80%;
+    width: 86%;
     margin-bottom: 20px;
   }
 
   .accordion-group {
     flex: 1;
-    max-width: 48%; 
   }
 
   .accordion-item {
+    width: 100%;
     flex: 1;
     border: 1px solid #FF6060;
     border-radius: 10px;
@@ -127,6 +127,7 @@
 
     .host-section {
       flex: 1;
+      gap: 25px;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -151,6 +152,7 @@
       }
 
       .rating {
+        margin-right: 20px;
         display: flex;
         justify-content: center;
 
@@ -180,6 +182,10 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+  }
+
+  .accordion-group {
+    max-width: 90%;
   }
 
   .housing-detail-content {

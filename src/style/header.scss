@@ -16,7 +16,7 @@
     }
 
     .header-nav {
-      font-size: 14px;
+      font-size: 18px;
 
       li {
         margin: 0 10px;
@@ -64,6 +64,7 @@
     .header-nav {
       flex-grow: 1;
       justify-content: flex-end;
+      width: 110%;
 
       li {
         margin: 0 10px;
@@ -82,7 +83,7 @@
 
     .header-nav {
       justify-content: center;
-      width: 100%;
+      width: 110%;
 
       li {
         margin: 0 5px;
