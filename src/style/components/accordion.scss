@@ -1,58 +1,78 @@
-.accordion {
+.accordion-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
   width: 100%;
   margin-bottom: 20px;
 
-  .accordion-item {
-    border: 1px solid #FF6060;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 10px;
+  .accordion {
+    flex: 1;
 
-    .accordion-button {
+    .accordion-item {
+      max-width: 100%;
+      border: 1px solid #FF6060;
+      border-radius: 10px;
+      overflow: hidden;
+
+      .accordion-button {
+        width: 100%;
+        padding: 15px;
+        background-color: #FF6060;
+        color: white;
+        text-align: left;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:hover {
+          background-color: #FF8080;
+        }
+
+        .accordion-arrow {
+          transition: transform 0.3s ease;
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 5px;
+          transform: rotate(45deg);
+        }
+
+        &.active .accordion-arrow {
+          transform: rotate(-135deg);
+        }
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 15px;
+        background-color: #FFECEC;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .accordion-button.active + .accordion-content {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    .accordion {
       width: 100%;
-      padding: 15px;
-      background-color: #FF6060;
-      color: white;
-      text-align: left;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      &:hover {
-        background-color: #FF8080;
+      .accordion-item {
+        max-width: 100%;
       }
-
-      .accordion-arrow {
-        transition: transform 0.3s ease;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        display: inline-block;
-        padding: 5px;
-        transform: rotate(45deg);
-      }
-
-      &.active .accordion-arrow {
-        transform: rotate(-135deg);
-      }
-    }
-
-    .accordion-content {
-      display: none;
-      padding: 15px;
-      background-color: #FFECEC;
-
-      p {
-        margin: 0;
-      }
-    }
-
-    .accordion-button.active + .accordion-content {
-      display: block;
     }
   }
 }

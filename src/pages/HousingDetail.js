@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Carousel from '../components/Carousel';
 import Accordion from '../components/Accordion';
 import Footer from '../components/Footer';
+import Rating from '../components/Rating';
 import accommodations from '../data/accommodations.json';
 import '../style/housingDetail.scss';
 
@@ -15,15 +16,14 @@ function HousingDetail() {
     return <Navigate to="/not-found" replace />;
   }
 
-  const accordionItems = [
-    { title: 'Description', content: accommodation.description },
-    { title: 'Équipements', content: accommodation.equipments.join(', ') },
-  ];
+  const description = { title: 'Description', content: accommodation.description };
+  const equipments = { title: 'Équipements', content: accommodation.equipments.join(', ') };
 
   return (
     <div className="housing-detail">
       <Header isHousingDetail={true} />
       <Carousel pictures={accommodation.pictures} />
+      
       <div className="housing-detail-content">
         <div className="text-section">
           <h1>{accommodation.title}</h1>
@@ -40,17 +40,17 @@ function HousingDetail() {
             <img src={accommodation.host.picture} alt={accommodation.host.name} className="host-img" />
             <span>{accommodation.host.name}</span>
           </div>
-          <div className="rating">
-            {[...Array(5)].map((star, index) => (
-              <span key={index} className={`star ${index < accommodation.rating ? 'filled' : ''}`}>&#9733;</span>
-            ))}
-          </div>
+          <Rating rating={parseInt(accommodation.rating)} />
         </div>
       </div>
-      <div className="accordion">
-        {accordionItems.map((item, index) => (
-          <Accordion key={index} title={item.title} content={item.content} />
-        ))}
+
+      <div className="accordion-container">
+        <div className="accordion-group">
+          <Accordion title={description.title} content={description.content} />
+        </div>
+        <div className="accordion-group">
+          <Accordion title={equipments.title} content={equipments.content} />
+        </div>
       </div>
       <Footer />
     </div>

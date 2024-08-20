@@ -8,8 +8,8 @@ function Header({ isHousingDetail }) {
       <img src={logo} alt="Kasa logo" className="header-logo" />
       <nav>
         <ul className="header-nav">
-          <li><a href="/">ACCUEIL</a></li>
-          <li><a href="/about">A PROPOS</a></li>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/about">A propos</a></li>
         </ul>
       </nav>
     </header>
