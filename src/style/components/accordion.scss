@@ -1,4 +1,12 @@
-.accordion-group {
+
+.housing-detail .accordion-item {
+  width: 100%;
+  border: 1px solid #FF6060;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: min-content;
+}.accordion-group {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -9,7 +17,7 @@
     flex: 1;
 
     .accordion-item {
-      max-width: 100%;
+      width: 100%;
       border: 1px solid #FF6060;
       border-radius: 10px;
       overflow: hidden;
@@ -57,7 +65,7 @@
         }
       }
 
-      .accordion-button.active + .accordion-content {
+      &.active .accordion-content {
         display: block;
       }
     }

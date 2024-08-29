@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Carousel from '../components/Carousel';
@@ -10,20 +10,30 @@ import '../style/housingDetail.scss';
 
 function HousingDetail() {
   const { id } = useParams();
+  
+  const [accordionState, setAccordionState] = useState({
+    description: false,
+    equipments: false
+  });
+
   const accommodation = accommodations.find(item => item.id === id);
 
   if (!accommodation) {
     return <Navigate to="/not-found" replace />;
   }
 
-  const description = { title: 'Description', content: accommodation.description };
-  const equipments = { title: 'Équipements', content: accommodation.equipments.join(', ') };
+  const toggleAccordion = (accordionName) => {
+    setAccordionState(prevState => ({
+      ...prevState,
+      [accordionName]: !prevState[accordionName]
+    }));
+  };
 
   return (
     <div className="housing-detail">
       <Header isHousingDetail={true} />
       <Carousel pictures={accommodation.pictures} />
-      
+
       <div className="housing-detail-content">
         <div className="text-section">
           <h1>{accommodation.title}</h1>
@@ -46,10 +56,20 @@ function HousingDetail() {
 
       <div className="accordion-container">
         <div className="accordion-group">
-          <Accordion title={description.title} content={description.content} />
+          <Accordion
+            title="Description"
+            content={accommodation.description}
+            isOpen={accordionState.description}
+            onToggle={() => toggleAccordion('description')}
+          />
         </div>
         <div className="accordion-group">
-          <Accordion title={equipments.title} content={equipments.content} />
+          <Accordion
+            title="Équipements"
+            content={accommodation.equipments.join(', ')}
+            isOpen={accordionState.equipments}
+            onToggle={() => toggleAccordion('equipments')}
+          />
         </div>
       </div>
       <Footer />

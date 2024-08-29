@@ -49,8 +49,7 @@
     }
   
     .about-details {
-      width: 80%;
-      max-width: 600px;
+      width: 68%;
       margin: 20px 0;
   
       .accordion {
@@ -124,3 +123,12 @@
       margin-top: auto;
     }
   }
+
+  @media (max-width: 768px) {
+    .about{
+    
+    .about-details {
+      width: 85%;
+    }
+  }
+}

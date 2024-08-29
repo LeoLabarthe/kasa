@@ -84,8 +84,8 @@
         text-align: center;
         flex: 1 1 calc(33.333% - 40px);
         max-width: calc(33.333% - 40px);
-        height: auto; /* Adjusted to be dynamic */
-        max-height: 400px; /* Sets a max height to match the banner */
+        height: auto;
+        max-height: 400px;
         background-size: cover;
         background-position: center;
       }
@@ -102,6 +102,12 @@
   }
 }
 
+@media (max-width: 1040px) {
+  .card {
+    width: 47%;
+  }
+}
+
 @media (max-width: 768px) {
   .home-listings-container {
     background-color: transparent;
@@ -110,6 +116,10 @@
     margin: 15px;
     border-radius: 10px;
     background-color: white;
+  }
+
+  .card {
+    width: 90%;
   }
 
   .home-listings-container-listings {

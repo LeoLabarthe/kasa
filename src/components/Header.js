@@ -5,7 +5,9 @@ import '../style/header.scss';
 function Header({ isHousingDetail }) {
   return (
     <header className={`header ${isHousingDetail ? 'header-housing-detail' : ''}`}>
-      <img src={logo} alt="Kasa logo" className="header-logo" />
+      <li>
+        <a href="/"><img src={logo} alt="Kasa logo" className="header-logo" /></a>
+      </li>
       <nav>
         <ul className="header-nav">
           <li><a href="/">Accueil</a></li>
