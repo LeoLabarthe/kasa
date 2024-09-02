@@ -22,6 +22,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 10px;
+    background-color: #FFECEC;
 
     .accordion-button {
       width: 100%;
@@ -68,6 +69,8 @@
 
     &.active .accordion-content {
       display: block;
+      min-height: 80px;
+      max-height: 1000px;
     }
   }
 

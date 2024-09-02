@@ -6,6 +6,10 @@
   padding: 20px;
   background: white;
 
+  li{
+    list-style-type: none;
+  }
+
   &.header-housing-detail {
     max-width: 1240px;
     width: 85%;
